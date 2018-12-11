@@ -19,6 +19,8 @@ public class VetorTeste {
 		System.out.println(lista.contem(a1));
 		Aluno a3 = new Aluno("Rafael");
 		System.out.println(lista.contem(a3));
+		lista.adiciona(a3);
+		System.out.println(lista.contem(a3));
 	}
 
 }
