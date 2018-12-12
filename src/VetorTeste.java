@@ -21,6 +21,10 @@ public class VetorTeste {
 		System.out.println(lista.contem(a3));
 		lista.adiciona(a3);
 		System.out.println(lista.contem(a3));
+		//System.out.println(lista.pega(200));
+		
+		System.out.println(lista.pega(2));
+		
 	}
 
 }
