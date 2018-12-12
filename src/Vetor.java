@@ -10,7 +10,14 @@ public class Vetor {
 		totalDeAlunos++;
 	}
 	
+	private boolean posicaoValida(int posicao) {
+		return posicao >= 0 && posicao <= totalDeAlunos;
+	}
+	
 	public void adiciona(int posicao, Aluno aluno) {
+		if(!posicaoValida(posicao)) {
+			throw new IllegalArgumentException("Posição Inválida");
+		}
 		for(int i = totalDeAlunos-1; i >= posicao; i--) {
 			alunos[i+1] = alunos[i];
 		}
