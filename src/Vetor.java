@@ -6,6 +6,7 @@ public class Vetor {
 	private int totalDeAlunos = 0;
 	
 	public void adiciona(Aluno aluno) {
+		this.garanteEspaco();
 		this.alunos[totalDeAlunos] = aluno;
 		totalDeAlunos++;
 	}
@@ -14,7 +15,18 @@ public class Vetor {
 		return posicao >= 0 && posicao <= totalDeAlunos;
 	}
 	
+	public void garanteEspaco() {
+		if(totalDeAlunos == alunos.length) {
+			Aluno[] novoArray = new Aluno[alunos.length*2];
+			for(int i = 0; i < alunos.length; i++) {
+				novoArray[i] = alunos[i];
+			}
+			this.alunos = novoArray;
+		}
+	}
+	
 	public void adiciona(int posicao, Aluno aluno) {
+		this.garanteEspaco();
 		if(!posicaoValida(posicao)) {
 			throw new IllegalArgumentException("Posição Inválida");
 		}
