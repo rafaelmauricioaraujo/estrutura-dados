@@ -26,8 +26,6 @@ public class VetorTeste {
 		System.out.println(lista.pega(2));
 		
 		lista.remove(1);
-		System.out.println(lista);
-		
+		System.out.println(lista);	
 	}
-
 }
