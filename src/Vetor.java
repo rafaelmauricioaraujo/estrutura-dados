@@ -37,6 +37,10 @@ public class Vetor {
 	}
 	
 	public void remove(int posicao) {
+		for(int i = posicao; i < this.totalDeAlunos; i++) {
+			this.alunos[i] = this.alunos[i+1];
+		}
+		totalDeAlunos--;
 		
 	}
 	
