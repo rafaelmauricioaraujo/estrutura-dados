@@ -11,7 +11,7 @@ public class ListaLigada {
 		this.primeiro = nova;
 		
 		if(this.totalDeElementos == 0) {
-			this.primeiro = this.ultima;
+			this.ultima = this.primeiro;
 		}
 		
 		this.totalDeElementos++;
@@ -24,7 +24,6 @@ public class ListaLigada {
 		}
 		
 		Celula atual = primeiro;
-		
 		StringBuilder builder = new StringBuilder("[");
 		for(int i = 0; i < totalDeElementos; i++) {
 			builder.append(atual.getElemento());
@@ -50,6 +49,7 @@ public class ListaLigada {
 	}
 	
 	public void adiciona(int posicao, Object elemento) {
+		
 		
 	}
 	
