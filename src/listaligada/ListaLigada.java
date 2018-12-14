@@ -3,11 +3,16 @@ package listaligada;
 public class ListaLigada {
 	
 	Celula primeiro = null;
+	Celula ultima = null;
 	private int totalDeElementos = 0;
 	
 	public void adicionaNoComeco(Object elemento) {
 		Celula nova = new Celula(elemento, primeiro);
 		this.primeiro = nova;
+		
+		if(this.totalDeElementos == 0) {
+			this.primeiro = this.ultima;
+		}
 		
 		this.totalDeElementos++;
 	}
@@ -34,6 +39,14 @@ public class ListaLigada {
 	
 	public void adiciona(Object elemento) {
 		
+		if(this.totalDeElementos == 0) {
+			adicionaNoComeco(elemento);
+		}else {
+			Celula nova = new Celula(elemento, null);
+			this.ultima.setProximo(nova);
+			this.ultima = nova;
+			this.totalDeElementos++;
+		}
 	}
 	
 	public void adiciona(int posicao, Object elemento) {
