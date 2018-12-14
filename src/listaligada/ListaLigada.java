@@ -12,6 +12,26 @@ public class ListaLigada {
 		this.totalDeElementos++;
 	}
 	
+	@Override
+	public String toString() {
+		if(this.totalDeElementos == 0) {
+			return "[]";
+		}
+		
+		Celula atual = primeiro;
+		
+		StringBuilder builder = new StringBuilder("[");
+		for(int i = 0; i < totalDeElementos; i++) {
+			builder.append(atual.getElemento());
+			builder.append(", ");
+			
+			atual = atual.getProximo();
+		}
+		
+		builder.append("]");
+		return builder.toString();
+	}
+	
 	public void adiciona(Object elemento) {
 		
 	}
