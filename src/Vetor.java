@@ -71,7 +71,5 @@ public class Vetor {
 	
 	public String toString() {
 		return Arrays.toString(alunos);
-	}
-	
-
+	}	
 }
