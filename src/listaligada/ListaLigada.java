@@ -57,7 +57,7 @@ public class ListaLigada {
 	}
 	
 	private boolean posicaoOcupada(int posicao) {
-		return posicao <= 0 && posicao < this.totalDeElementos;
+		return posicao >= 0 && posicao < this.totalDeElementos;
 	}
 	
 	private Celula pegaCelula(int posicao) {
