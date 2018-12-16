@@ -1,6 +1,7 @@
 package listaligada;
 
 public class TestaListaLigada {
+
 	public static void main(String[] args) {
 		ListaLigada lista = new ListaLigada();
 		 
@@ -15,6 +16,11 @@ public class TestaListaLigada {
 		System.out.println(lista);
 		
 		lista.adiciona(2, "Vivi");
+		System.out.println(lista);
+		
+		System.out.println(lista.tamanho());
+		
+		lista.removeDoComeco();
 		System.out.println(lista);
 
 	}

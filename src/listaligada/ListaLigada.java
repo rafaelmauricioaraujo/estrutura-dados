@@ -81,7 +81,7 @@ public class ListaLigada {
 		return this.pegaCelula(posicao).getElemento();
 	}
 	
-	public void remove(int posicao) {
+	public void removeDoComeco() {
 		if(this.totalDeElementos == 0) {
 			throw new IllegalArgumentException("Lista vazia");
 		}else {
@@ -99,5 +99,9 @@ public class ListaLigada {
 	
 	public boolean contem(Object o) {
 		return false;
+	}
+	
+	public void remove(int posicao) {
+		
 	}
 }
