@@ -10,6 +10,12 @@ public class TestaListaLigada {
 		lista.adicionaNoComeco("Teti");
 		lista.adiciona("Gigi");
 		System.out.println(lista);
+		
+		lista.adiciona(2, "Dunga");
+		System.out.println(lista);
+		
+		lista.adiciona(2, "Vivi");
+		System.out.println(lista);
 
 	}
 }

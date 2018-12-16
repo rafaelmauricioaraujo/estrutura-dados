@@ -3,6 +3,8 @@ package listaligada;
 public class Celula {
 	
 	private Object elemento;
+	
+	private Celula anterior;
 	private Celula proximo;
 	
 public Celula(Object elemento, Celula proximo) {
@@ -20,5 +22,13 @@ public Celula(Object elemento, Celula proximo) {
 	
 	public Object getElemento() {
 		return elemento;
+	}
+	
+	public Celula getAnterior() {
+		return anterior;
+	}
+	
+	public void setAnterior(Celula anterior) {
+		this.anterior = anterior;
 	}
 }

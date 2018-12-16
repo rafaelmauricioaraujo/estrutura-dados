@@ -78,15 +78,23 @@ public class ListaLigada {
 	}
 	
 	public Object pega(int posicao) {
-		return null;
+		return this.pegaCelula(posicao).getElemento();
 	}
 	
 	public void remove(int posicao) {
-		
+		if(this.totalDeElementos == 0) {
+			throw new IllegalArgumentException("Lista vazia");
+		}else {
+			this.primeiro = this.primeiro.getProximo();
+			this.totalDeElementos--;
+		}
+		if(this.totalDeElementos == 0) {
+			this.ultima = null;
+		}
 	}
 	
 	public int tamanho() {
-		return 0;
+		return this.totalDeElementos;
 	}
 	
 	public boolean contem(Object o) {
