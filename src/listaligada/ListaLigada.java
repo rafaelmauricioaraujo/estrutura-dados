@@ -43,7 +43,7 @@ public class ListaLigada {
 			adicionaNoComeco(elemento);
 		}else {
 			Celula nova = new Celula(elemento);
-			this.ultima.setAnterior(nova);
+			this.ultima.setProxima(nova);
 			nova.setAnterior(this.ultima);
 			this.ultima = nova;
 			this.totalDeElementos++;
@@ -72,7 +72,7 @@ public class ListaLigada {
 	
 	private Celula pegaCelula(int posicao) {
 		if(!posicaoOcupada(posicao)) {
-			throw new IllegalArgumentException("Posição Ocupada");
+			throw new IllegalArgumentException("Posição Não Encontrada");
 		}
 		Celula atual = primeira;
 		for(int i = 0; i < posicao; i++) {
