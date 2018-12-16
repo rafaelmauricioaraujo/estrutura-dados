@@ -5,19 +5,23 @@ public class Celula {
 	private Object elemento;
 	
 	private Celula anterior;
-	private Celula proximo;
+	private Celula proxima;
 	
-public Celula(Object elemento, Celula proximo) {
+public Celula(Object elemento) {
+	this(null, elemento);
+}
+	
+public Celula(Celula proxima, Object elemento) {
 		this.elemento = elemento;
-		this.proximo = proximo;
+		this.proxima = proxima;
 	}
 	
-	public Celula getProximo() {
-		return proximo;
+	public Celula getProxima() {
+		return proxima;
 	}
 
-	public void setProximo(Celula proximo) {
-		this.proximo = proximo;
+	public void setProxima(Celula proxima) {
+		this.proxima = proxima;
 	}
 	
 	public Object getElemento() {
