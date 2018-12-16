@@ -49,10 +49,16 @@ public class ListaLigada {
 	}
 	
 	public void adiciona(int posicao, Object elemento) {
+		if(posicao == 0) {
+			adicionaNoComeco(elemento);
+		}else if (posicao == this.totalDeElementos){
+			adiciona(elemento);
+		}
 		
 		Celula anterior = this.pegaCelula(posicao - 1);
 		Celula nova = new Celula(elemento, anterior.getProximo());
 		anterior.setProximo(nova);
+		this.totalDeElementos++;
 		
 	}
 	
