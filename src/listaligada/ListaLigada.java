@@ -97,15 +97,50 @@ public class ListaLigada {
 		}
 	}
 	
+	public void removeDoFim() {
+		if(this.totalDeElementos == 1) {
+			this.removeDoComeco();
+		} else {
+			Celula penultima = this.ultima.getAnterior();
+			penultima.setProxima(null);
+			this.ultima = penultima;
+			this.totalDeElementos--;
+		}
+	}
+	
+	
 	public int tamanho() {
 		return this.totalDeElementos;
 	}
 	
-	public boolean contem(Object o) {
+	public boolean contem(Object elemento) {
+		Celula atual = this.primeira;
+		
+		while(atual != null) {
+			if(atual.getElemento().equals(elemento)) {
+				return true;
+			}
+			
+			atual.getProxima();
+		}
+		
 		return false;
 	}
 	
 	public void remove(int posicao) {
-		
+		if(posicao == 0) {
+			this.removeDoComeco();
+		} else if(posicao == this.totalDeElementos -1) {
+			this.removeDoFim();
+		} else {
+			Celula anterior = this.pegaCelula(posicao - 1);
+			Celula atual = anterior.getProxima();
+			Celula proxima = atual.getProxima();
+			
+			anterior.setProxima(proxima);
+			proxima.setAnterior(anterior);
+			
+			this.totalDeElementos--;
+		}
 	}
 }
