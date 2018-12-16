@@ -5,7 +5,7 @@ public class Celula {
 	private Object elemento;
 	private Celula proximo;
 	
-	public Celula(Object elemento, Celula proximo) {
+public Celula(Object elemento, Celula proximo) {
 		this.elemento = elemento;
 		this.proximo = proximo;
 	}
