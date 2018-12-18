@@ -1,26 +1,32 @@
 package pilha;
 
+import java.util.Stack;
+
 public class TestaPilha {
 	
 	public static void main(String[] args) {
 		Pilha pilha = new Pilha();
 		
-		pilha.insere("Rafael");
+		pilha.push("Rafael");
 		System.out.println(pilha);
 		
-		pilha.insere("Teti");
+		pilha.push("Teti");
 		System.out.println(pilha);
 		
-		pilha.insere("Dunga");
+		pilha.push("Dunga");
 		System.out.println(pilha);
+		System.out.println(pilha.vazio());
 		
-		String r1 = pilha.remove();
-		
-		System.out.println(pilha);
-		String r2 = pilha.remove();
-		String r3 = pilha.remove();
+		String r1 = pilha.pop();
 		
 		System.out.println(pilha);
+		String r2 = pilha.pop();
+		String r3 = pilha.pop();
+		
+		System.out.println(pilha);
+		System.out.println(pilha.vazio());
+		
+		Stack<String> strings = new Stack<String>();
 		
 	}
 

@@ -7,17 +7,17 @@ public class Pilha {
 	
 	private List<String> nomes = new LinkedList<String>();
 	
-	public void insere(String nome) {
+	public void push(String nome) {
 		nomes.add(nome);
 		
 	}
 	
-	public String remove() {
+	public String pop() {
 		return nomes.remove(nomes.size()-1);
 	}
 	
 	public boolean vazio() {
-		return true;
+		return nomes.isEmpty();
 	}
 	
 	@Override
