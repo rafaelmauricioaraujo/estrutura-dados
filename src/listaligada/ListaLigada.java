@@ -121,7 +121,7 @@ public class ListaLigada {
 				return true;
 			}
 			
-			atual.getProxima();
+			atual = atual.getProxima();
 		}
 		
 		return false;
