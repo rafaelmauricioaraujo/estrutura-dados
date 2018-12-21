@@ -14,6 +14,10 @@ public class Fila {
 		return alunos.remove(0);
 	}
 	
+	public boolean vazia() {
+		return alunos.isEmpty();
+	}
+	
 	@Override
 	public String toString() {
 		return alunos.toString();
