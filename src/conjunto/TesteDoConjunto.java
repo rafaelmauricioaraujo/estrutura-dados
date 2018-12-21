@@ -13,5 +13,11 @@ public class TesteDoConjunto {
 		conjunto.adiciona("Amor");
 		
 		System.out.println(conjunto);
+		
+		conjunto.adiciona("Vivi");
+		System.out.println(conjunto);
+		
+		conjunto.remove("Vivi");
+		System.out.println(conjunto);
 	}
 }
