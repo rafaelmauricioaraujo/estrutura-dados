@@ -26,6 +26,14 @@ public class TestandoListas {
 			System.out.println("Aula: " + aula);
 		}
 		
+		String primeiraAula = aulas.get(0);
+		System.out.println("A primeira aula é " + primeiraAula);
+		
+		aulas.forEach(aula -> {
+			System.out.println("Percorrendo:");
+			System.out.println("Aula: " + aula);
+		});
+		
 	}
 	
 }
