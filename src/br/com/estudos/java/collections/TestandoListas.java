@@ -1,6 +1,7 @@
 package br.com.estudos.java.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestandoListas {
 	
@@ -33,6 +34,13 @@ public class TestandoListas {
 			System.out.println("Percorrendo:");
 			System.out.println("Aula: " + aula);
 		});
+		
+		aulas.add("Aumentando o nosso conhecimento");
+		System.out.println(aulas);
+		
+		Collections.sort(aulas);
+		
+		System.out.println(aulas);
 		
 	}
 	
