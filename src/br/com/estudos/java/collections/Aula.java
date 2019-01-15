@@ -17,6 +17,5 @@ public class Aula {
 	public int getTempo() {
 		return tempo;
 	}
-	
 
 }
