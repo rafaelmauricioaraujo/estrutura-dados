@@ -2,6 +2,7 @@ package br.com.estudos.java.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class TestaListaDeAula {
 	public static void main(String[] args) {
@@ -18,5 +19,8 @@ public class TestaListaDeAula {
 		System.out.println(aulas);
 		Collections.sort(aulas);
 		System.out.println(aulas);
+		
+		//Utilizando outro critério de comparação
+		Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 	}
 }
