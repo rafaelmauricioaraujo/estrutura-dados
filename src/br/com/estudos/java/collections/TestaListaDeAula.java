@@ -1,6 +1,7 @@
 package br.com.estudos.java.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestaListaDeAula {
 	public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class TestaListaDeAula {
 		aulas.add(a2);
 		aulas.add(a3);
 		
+		System.out.println(aulas);
+		Collections.sort(aulas);
 		System.out.println(aulas);
 	}
 }
