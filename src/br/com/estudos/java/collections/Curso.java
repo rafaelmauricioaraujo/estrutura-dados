@@ -1,6 +1,7 @@
 package br.com.estudos.java.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Curso {
@@ -16,7 +17,7 @@ public class Curso {
 	}
 
 	public List<Aula> getAulas() {
-		return aulas;
+		return Collections.unmodifiableList(aulas);
 	}
 
 	public String getNome() {
@@ -25,6 +26,10 @@ public class Curso {
 
 	public String getInstrutor() {
 		return instrutor;
+	}
+	
+	public void adiciona(Aula aula) {
+		this.aulas.add(aula);
 	}
 
 }
