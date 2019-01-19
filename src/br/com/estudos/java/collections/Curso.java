@@ -42,7 +42,7 @@ public class Curso {
 
 	@Override
 	public String toString() {
-		return "[" + this.nome + ", tempo total: " + this.getTempoTotal() + "]";
+		return "[" + this.nome + ", tempo total: " + this.getTempoTotal() + " Aulas: " + this.getAulas() + " ]";
 	}
 
 }
