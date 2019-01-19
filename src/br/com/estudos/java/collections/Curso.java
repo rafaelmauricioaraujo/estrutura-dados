@@ -27,17 +27,22 @@ public class Curso {
 	public String getInstrutor() {
 		return instrutor;
 	}
-	
+
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
 	}
-	
+
 	public int getTempoTotal() {
 		int tempoTotal = 0;
 		for (Aula aula : aulas) {
 			tempoTotal += aula.getTempo();
 		}
 		return tempoTotal;
+	}
+
+	@Override
+	public String toString() {
+		return "[" + this.nome + ", tempo total: " + this.getTempoTotal() + "]";
 	}
 
 }
