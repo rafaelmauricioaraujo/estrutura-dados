@@ -17,6 +17,9 @@ public class TesteAlunos {
 		
 		System.out.println(alunos);
 		
+		boolean rafaelEstaPresente = alunos.contains("Rafael Araujo");
+		System.out.println(rafaelEstaPresente);
+		
 		for (String aluno : alunos) {
 			System.out.println(aluno);
 		}
