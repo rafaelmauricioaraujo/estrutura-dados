@@ -2,7 +2,9 @@ package br.com.estudos.java.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Curso {
 
@@ -10,6 +12,7 @@ public class Curso {
 	private String instrutor;
 	// Deixando o cógido mais genérico, mais polimorfico com a classe List
 	private List<Aula> aulas = new ArrayList<Aula>();
+	private Set<Aluno> alunos = new HashSet<>();
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
