@@ -48,4 +48,8 @@ public class Curso {
 		return "[" + this.nome + ", tempo total: " + this.getTempoTotal() + " Aulas: " + this.getAulas() + " ]";
 	}
 
+	public void matricula(Aluno aluno) {
+		this.alunos.add(aluno);
+	}
+
 }
