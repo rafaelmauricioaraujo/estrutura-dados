@@ -29,7 +29,7 @@ public class Aluno {
 	
 	@Override
 	public int hashCode() {
-		return this.nome.charAt(0);
+		return this.nome.hashCode();
 	}
 	
 	@Override
