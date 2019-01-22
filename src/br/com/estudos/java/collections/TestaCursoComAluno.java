@@ -24,6 +24,7 @@ public class TestaCursoComAluno {
 		});
 		
 		System.out.println(javaColecoes.estaMatriculado(a1));
+		
 	}
 
 }
