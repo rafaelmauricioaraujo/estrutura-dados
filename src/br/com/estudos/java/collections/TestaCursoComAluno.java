@@ -1,5 +1,8 @@
 package br.com.estudos.java.collections;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
 	public static void main(String[] args) {
@@ -19,6 +22,10 @@ public class TestaCursoComAluno {
 		javaColecoes.matricula(a3);
 		
 		System.out.println("Alunos matriculados:");
+		
+		Set<Aluno> alunos = javaColecoes.getAlunos();
+		Iterator<Aluno> iterador = alunos.iterator();
+		
 		javaColecoes.getAlunos().forEach(aluno -> {
 			System.out.println(aluno);
 		});
