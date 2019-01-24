@@ -25,7 +25,12 @@ public class TestaCursoComAluno {
 		
 		Set<Aluno> alunos = javaColecoes.getAlunos();
 		Iterator<Aluno> iterador = alunos.iterator();
-		
+		while (iterador.hasNext()) {
+			
+			Aluno proximo = iterador.next();
+			System.out.println("(usando Iterador)" + proximo);
+			
+		}
 		javaColecoes.getAlunos().forEach(aluno -> {
 			System.out.println(aluno);
 		});
