@@ -22,7 +22,4 @@ public class Recibo {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	
-	
-
 }
