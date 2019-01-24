@@ -31,6 +31,9 @@ public class TestaCursoComAluno {
 			System.out.println("(usando Iterador)" + proximo);
 			
 		}
+		Aluno depoisDoUltimo = iterador.next();
+		
+		/*
 		javaColecoes.getAlunos().forEach(aluno -> {
 			System.out.println(aluno);
 		});
@@ -41,7 +44,7 @@ public class TestaCursoComAluno {
 		
 		System.out.println("O" + a1 + "é equals ao Rafael Araujo");
 		System.out.println(a1.equals(rafael));
-		
+		*/
 		
 		
 		
