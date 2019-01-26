@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class Curso {
@@ -65,6 +66,9 @@ public class Curso {
 	}
 
 	public Aluno buscaMatriculado(int numero) {
+		if(!matriculaParaAluno.containsKey(numero)) {
+			throw new NoSuchElementException("Aluno não encontrado");
+		}
 		return matriculaParaAluno.get(numero);
 	}
 
